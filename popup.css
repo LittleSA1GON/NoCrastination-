@@ -1,0 +1,814 @@
+body {
+  width: 278px;
+  height: 450px;
+  background-color: #e8e485;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+  user-select: none;
+}
+
+img {
+  user-select: none;
+}
+
+.back {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#TitleContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#maintitle {
+  text-align: center;
+  color: white;
+  font-size: 2.8em;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#alarmtitle {
+  text-align: center;
+  color: white;
+  font-size: 2.8em;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+#remindertitle {
+  text-align: center;
+  color: white;
+  font-size: 2.8em;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.intensities {
+  height: 55px;
+  width: 200px;
+  line-height: 55px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intensities p {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#NavBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+#Settings {
+  position: relative;
+  background-color: #f6c92b;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  height: 50px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#SettingsPopup {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateX(0%);
+  transform: translateY(-100%);
+  background-color: #f6c92b;
+
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 205px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  cursor: default;
+}
+
+#SettingsPopup > p {
+  font-size: 2.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #4ac275;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.setting > p {
+  font-size: 1.7em;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  color: white;
+}
+
+#Block {
+  background-color: #f94343;
+  border-radius: 15px;
+  width: 150px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#Block img {
+  height: 65px;
+}
+
+#Menu {
+  position: relative;
+  background-color: #f6c92b;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  height: 50px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#MenuPopup {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translateX(0%);
+  transform: translateY(-100%);
+  background-color: #f6c92b;
+
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 205px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  cursor: default;
+}
+
+#MenuPopup > p {
+  font-size: 2.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #ebebeb;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu > p {
+  font-size: 1.7em;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  color: rgb(34, 34, 34);
+}
+
+.sideNavButton img {
+  width: 35px;
+}
+
+#Intensity {
+  background-color: blueviolet;
+  width: 225px;
+  position: relative;
+  cursor: pointer;
+}
+
+#SiteList {
+  height: 155px;
+  width: 200px;
+  line-height: 55px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #a19797;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+}
+
+#SiteList::-webkit-scrollbar {
+  display: none;
+}
+
+.site {
+  height: 35px;
+  width: 180px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: wheat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.site img {
+  cursor: pointer;
+}
+
+.sitetext {
+  line-height: normal;
+  width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+.siteclose {
+  height: 10px;
+  width: 10px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+#Mild {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+#Serious {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+#Restrictive {
+  background-color: #f34949;
+  cursor: pointer;
+}
+
+#FullyRestricted {
+  background-color: black;
+  cursor: pointer;
+}
+
+#Timer {
+  background-color: black;
+}
+
+#IntensityPopup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(252, 203, 131);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 205px;
+  margin-right: auto;
+  margin-left: auto;
+
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: default;
+}
+
+#URLInputPopup {
+  width: 240px;
+  height: 240px;
+  background-color: #f6c92b;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#URLInputPopup p {
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+#URLHostname {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#URLIcon {
+  width: 30px;
+  height: 30px;
+}
+
+#URLInput {
+  height: fit-content;
+  width: fit-content;
+  word-wrap: break-word;
+  word-break: break-all;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+}
+
+#URLEndingInput {
+  height: fit-content;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  margin-top: 10px;
+}
+#URLInputSubmit {
+  margin-top: auto;
+  width: 200px;
+  height: 50px;
+  font-size: 2em;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 10px;
+  background-color: #4ac275;
+  color: white;
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed; /* Positioning and size */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2); /* color */
+  z-index: 1;
+}
+
+#Alarms {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto; /* Adding overflow-y property */
+}
+
+#Alarms::-webkit-scrollbar {
+  display: none;
+}
+
+.alarm {
+  height: 55px;
+  width: 225px;
+  line-height: 55px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.alarm p {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 2em; /* a x number of line to show (ex : 2 line)  */
+  width: 140px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.alarm div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 78px;
+  height: 55px;
+}
+
+.alarm div p {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  line-height: normal;
+  width: auto;
+  height: auto;
+}
+
+.alarm img {
+  height: 30px;
+  cursor: pointer;
+}
+
+.alarmpopup {
+  display: none;
+  width: 100px;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  transform: translateX(0%);
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(57, 57, 57);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+}
+
+.alarmpopup p {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: white;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+#AlarmPopup {
+  width: 240px;
+  height: 240px;
+  background-color: #f6c92b;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#AlarmPopup h1 {
+  font-size: 1.7em;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: normal;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.alarminput {
+  height: 25px;
+  width: 200px;
+  word-wrap: break-word;
+  word-break: break-all;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#AlarmSubmit {
+  margin-top: auto;
+  width: 200px;
+  height: 50px;
+  font-size: 2em;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 10px;
+  background-color: #4ac275;
+  color: white;
+  cursor: pointer;
+}
+
+.reminderpopup {
+  display: none;
+  width: 100px;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  transform: translateX(0%);
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(57, 57, 57);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+}
+
+.reminderpopup p {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: white;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+#ReminderPopup {
+  width: 240px;
+  height: 240px;
+  background-color: #f6c92b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#ReminderPopup h1 {
+  font-size: 1.7em;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: normal;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.reminderinput {
+  height: 25px;
+  width: 200px;
+  word-wrap: break-word;
+  word-break: break-all;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#ReminderSubmit {
+  margin-top: auto;
+  width: 200px;
+  height: 50px;
+  font-size: 2em;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 10px;
+  background-color: #4ac275;
+  color: white;
+  cursor: pointer;
+}
+
+#Reminders {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto; /* Adding overflow-y property */
+}
+
+#Reminders::-webkit-scrollbar {
+  display: none;
+}
+
+.reminder {
+  width: 225px;
+  line-height: 55px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgreen;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.reminder p {
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+
+  overflow: hidden;
+  word-wrap: break-word;
+  display: block;
+  line-height: normal; /* a */
+  width: 140px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.reminder div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 78px;
+  height: 55px;
+}
+
+.reminder div p {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: black;
+  line-height: normal;
+  width: auto;
+  height: auto;
+}
+
+.reminder img {
+  height: 30px;
+  cursor: pointer;
+}
+
+.reminderpopup {
+  display: none;
+  width: 100px;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  transform: translateX(0%);
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(57, 57, 57);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+}
+
+.reminderpopup p {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: white;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+#sitetimestitle {
+  text-align: center;
+  color: white;
+  font-size: 2.8em;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+#SiteTimes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Adding overflow-y property */
+}
+
+#SiteTimes::-webkit-scrollbar {
+  display: none;
+}
+
+.sitetrack {
+  width: -webkit-fill-available;
+  line-height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f6c92b;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sitetrack p {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: normal; /* a */
+  width: 150px;
+  text-align: left;
+}
+
+.sitetrackingbarcontainer {
+  width: 100%;
+  height: 100%;
+}
+
+.sitetrackingbar {
+  width: auto;
+  height: auto;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+}
+
+.sitetrackingbar p {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: black;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: normal; /* a */
+  text-align: left;
+}

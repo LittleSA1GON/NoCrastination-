@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="extra.css" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Noto+Sans+Lao&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="TitleContainer">
+      <img
+        id="fakeback"
+        class="back"
+        src="images/back.png"
+        style="visibility: hidden"
+      />
+      <h1 id="maintitle" class="main">No-Crastination</h1>
+      <h1 id="alarmtitle" class="alarms">Alarms</h1>
+      <h1 id="remindertitle" class="reminders">Reminders</h1>
+      <h1 id="sitetimestitle" class="sitetracking">Site Time</h1>
+      <img class="back alarms reminders" src="images/back.png" />
+    </div>
+    <div id="Intensity" class="intensities main">
+      <p id="IntensityText">Intensity</p>
+      <div id="IntensityPopup" class="slide-down">
+        <div id="Mild" class="intensities">
+          <p>Mild</p>
+        </div>
+        <div id="Serious" class="intensities">
+          <p>Serious</p>
+        </div>
+        <div id="Restrictive" class="intensities">
+          <p>Restrictive</p>
+        </div>
+        <div id="FullyRestricted" class="intensities">
+          <p style="color: white">Fully Restricted</p>
+        </div>
+      </div>
+    </div>
+    <div id="Alarms" class="alarms"></div>
+    <div id="Reminders" class="reminders"></div>
+    <div id="SiteTimes" class="sitetracking"></div>
+    <div id="SiteList" class="main"></div>
+    <div id="overlay">
+      <div id="URLInputPopup" class="main">
+        <p>Input URL to Block</p>
+        <div id="URLHostname">
+          <img id="URLIcon" src="images/loading.gif" />
+          <textarea id="URLInput" wrap="soft"></textarea>
+          <img src="images/slash.png" style="width: 30px; height: 30px" />
+        </div>
+        <textarea id="URLEndingInput" wrap="soft"></textarea>
+        <button id="URLInputSubmit">Block</button>
+      </div>
+      <div id="AlarmPopup" class="alarms">
+        <h1>Add Alarm</h1>
+        <p>Name</p><input id="AlarmName" class="alarminput" type="text"></input>
+        <p>Time</p><input id="AlarmTime" class="alarminput" type="time"></input>
+        <p>Date</p><input id="AlarmDate" class="alarminput" type="date"></input>
+        <button id="AlarmSubmit">Add</button>
+      </div>
+      <div id="ReminderPopup" class="reminders">
+        <h1>Add Reminder</h1>
+        <p>Name</p><input id="ReminderName" class="reminderinput" type="text"></input>
+        <p>Priority</p>
+        <select id="ReminderPriority" class="reminderinput">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="ReminderSubmit">Add</button>
+      </div>
+    </div>
+    <div id="NavBar">
+      <div id="Settings" class="sideNavButton">
+        <div id="SettingsPopup">
+          <p>Settings</p>
+        </div>
+        <img src="images/settings.png" />
+      </div>
+      <div id="Block">
+        <img src="images/block.png" />
+      </div>
+      <div id="Menu" class="sideNavButton">
+        <div id="MenuPopup">
+          <p>Menu</p>
+        </div>
+        <img src="images/menu.png" />
+      </div>
+      <div id="Timer" class="sideNavButton"></div>
+    </div>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
